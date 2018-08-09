@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  </head>
+  <body>
+  	<a-assets>
+    <a-asset-item id="flares" src="flares.dae" scale="0.1 0.1 0.1"></a-asset-item>
+  </a-assets>
+    <a-scene>
+  <a-box color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
+   		<a-collada-model src="#flares"></a-collada-model>
+    </a-scene>
+  </body>
+</html>
