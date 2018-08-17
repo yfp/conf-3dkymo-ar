@@ -9,10 +9,11 @@
         <a-asset-item id="flares" src="flares-04.gltf"></a-asset-item>
       </a-assets>
     
-      <a-box position='0 -0.5 0' color="tomato" material='opacity: 0.5;'></a-box>
       <a-gltf-model src="#flares"
-          position='0 0 -0.07' scale="0.1 0.1 0.1"
-          ></a-gltf-model>
+          position='0 0 +0.07'
+          scale="0.1 0.1 0.1"
+          rotation="0 180 0">
+      </a-gltf-model>
       <!-- <a-marker-camera type='pattern' patternUrl='pattern-qr-index.patt'></a-marker-camera> -->
       <a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>

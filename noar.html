@@ -4,19 +4,30 @@
   </head>
   <body style='margin : 0px; overflow: hidden;'>
   
-    <a-scene>
+    <a-scene do-something>
       <a-assets>
         <a-asset-item id="flares" src="flares-04.gltf"></a-asset-item>
       </a-assets>
 
       <a-box position='0 -0.5 0' color="tomato" material='opacity: 0.5;'></a-box>
       <a-gltf-model src="#flares"
-          position='0 0 -0.07' scale="0.1 0.1 0.1"
-          ></a-gltf-model>
-      <a-entity position="1 1 0">
+          position='0 0 +0.07'
+          scale="0.1 0.1 0.1"
+          rotation="0 220 0">
+      </a-gltf-model>
+      <a-entity position="0 1 2" rotation="0 0 0">
         <a-camera></a-camera>
       </a-entity>
     </a-scene>
-      
+    <script language="javascript">
+      var SCENE;
+      AFRAME.registerComponent('do-something', {
+        init: function () {
+          SCENE = this.el;
+          // console.log(sceneEl);
+          
+        }
+      });
+    </script>
   </body>
 </html>
